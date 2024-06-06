@@ -3,11 +3,13 @@ import Select, { components } from 'react-select';
 import '../App.css';
 import ColorPicker from './ColorPicker';
 import TexturePaths from './TexturePaths';
+import RedirectButton from './RedirectButton';
+
 
 const options = [
     { value: 1, label: 'Raven', image: '/options/raven.png' },
     { value: 2, label: 'Absolute Slaughter', image: '/options/slaughter.png' },
-    { value: 3, label: 'Bat Lady', image:'/options/bats.png'},
+    { value: 3, label: 'Bat Lady', image: '/options/bats.png' },
     { value: 4, label: 'Brake Line', image: '/options/brakeline.png' },
     { value: 5, label: 'Danger Inside', image: '/options/danger.png' },
     { value: 6, label: 'Joker', image: '/options/joker.png' },
@@ -26,6 +28,7 @@ const options = [
     { value: 19, label: 'Wild West', image: '/options/wildwest.png' },
     { value: 20, label: 'Zombie', image: '/options/zombie.png' },
 ];
+
 
 const Option = ({ data, ...props }) => (
     <components.Option {...props}>
@@ -73,8 +76,7 @@ const Configurator = () => {
                         <ColorPicker />
                     </div>
                 </div>
-
-
+                    
                 <div className='texture-images'>
                     {TexturePaths.map((v) => {
                         return (
@@ -85,6 +87,7 @@ const Configurator = () => {
 
             </div>
         </>
+
     );
 };
 

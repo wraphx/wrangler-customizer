@@ -5,6 +5,7 @@ import { ContactShadows, Environment, Lightformer, OrbitControls, Loader } from 
 import { CustomizationProvider } from "./context/Customization"
 import Configurator from "./components/Configurator";
 import { Wrangler } from "./vehicles/Wrangler";
+import RedirectButton from "./components/RedirectButton";
 
 export default function App() {
 
@@ -51,7 +52,9 @@ export default function App() {
           {/* <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} /> */}
           <OrbitControls    enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.8} maxPolarAngle={Math.PI / 2.8} />
         </Canvas>
+       
         <Configurator />
+        
       </div>
 
     </CustomizationProvider>
